@@ -56,18 +56,19 @@ bot.onText(/.*status.*/, function (msg, match) {
       } else {
         var current = JSON.parse(payload);
         rsp = 'Current status indoors:\n' + 
-          '🌡️ *' + (parseFloat(current.temperature).toFixed(1)-3) + ' ℃*\n' +
+          '🌡️ *' + (parseFloat(current.temperature).toFixed(1)) + ' °C*\n' +
           '💧 *' + parseInt(current.humidity) + ' %*\n' + 
           '🎈 *' + parseInt(current.pressure) + ' hPa*';
       }
       respond(msg, rsp, chatId);
       if(parseInt(current.humidity)<20) {
         setTimeout(function(){
-          respond(msg, `🤔 Hmm.. That humidity is rather low (${parseInt(current.humidity)}%). Recommended humidity this time of year is 20-40%.`, chatId);
-        }, 1500);
+          respond(msg, `🤔 Hmm.. That humidity is rather low (${parseInt(current.humidity)}%). ` +
+          `Recommended humidity this time of year is 20-40%. You could try turning heating down 1°C as that should increase humidity.`, chatId);
+        }, 2000);
       }
     });
-  }, 1000);
+  }, 500);
 
 });
 
