@@ -1,2 +1,10 @@
-# kotibot
-KotiBot chatbot for KotiBot home automation and monitoring system.
+# KotiBot
+
+KotiBot is a chatbot brains for KotiBot home automation and monitoring system.
+
+Example chat with KotiBot:
+
+![Example of KotiBot](docs/images/example_chat_status.gif)
+
+---
+Copyright 2017 [Tommi Laukkanen](https://github.com/tlaukkanen)
