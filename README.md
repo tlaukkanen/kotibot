@@ -1,5 +1,7 @@
 # KotiBot
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tlaukkanen/kotibot.svg)](https://greenkeeper.io/)
+
 KotiBot is a chatbot brains for KotiBot home automation and monitoring system.
 
 Example chat with KotiBot:
