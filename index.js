@@ -1,11 +1,9 @@
-"use strict";
-
-var TelegramBot = require('node-telegram-bot-api');
+const TelegramBot = require('node-telegram-bot-api');
 const Wreck = require('wreck');
 
-var token = process.env.TELEGRAM_BOT_TOKEN || 'YOUR_TELEGRAM_BOT_TOKEN';
+const token = process.env.TELEGRAM_BOT_TOKEN || 'YOUR_TELEGRAM_BOT_TOKEN';
 
-var bot = new TelegramBot(token, { polling: true });
+const bot = new TelegramBot(token, { polling: true });
 bot.getMe().then(function (me) {
   console.log('Hi my name is %s!', me.username);
 });
